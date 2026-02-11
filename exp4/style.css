@@ -1,0 +1,66 @@
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 0;
+    background: linear-gradient(120deg, #e8f5e9, #f1f8e9);
+}
+
+/* Header */
+header {
+    background-color: #2e7d32;   /* Fresh green */
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Navigation */
+nav {
+    background-color: #1b5e20;   /* Dark green */
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 14px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #c8e6c9;
+}
+
+/* Main section */
+section {
+    padding: 25px;
+}
+
+/* Product cards */
+article {
+    background-color: #ffffff;
+    border: 1px solid #c5e1a5;
+    padding: 18px;
+    margin: 12px;
+    width: 220px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* Headings */
+h2, h3 {
+    color: #2e7d32;
+}
+
+/* Footer */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

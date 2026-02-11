@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FreshMart | Products</title>
+     <link rel="stylesheet" href="style.css">
+     <style>
+        .product-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 220px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+.button {
+    background-color: #060f18;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+    </style>
+
+
+</head>
+<body>
+
+<header>
+    <h1>FreshMart Products </h1>
+    <p>Fresh groceries directly from farm to home</p>
+</header>
+
+<nav>
+    <a href="index.html">HOME 🏠</a> |
+    <a href="products.html">PRODUCTS 🛒</a> |
+    <a href="offers.html">OFFERS 🔥</a> |
+    <a href="cart.html">CART 🧺</a> |
+    <a href="contact.html">CONTACT 📞</a>
+</nav>
+
+<section class="product-container">
+
+<article>
+    <figure>
+        <img src="https://png.pngtree.com/png-vector/20231017/ourmid/pngtree-3d-red-apple-png-with-green-leaf-png-image_10201408.png"
+             alt="Fresh Apples" width="100" height="50">
+        <figcaption> Apples</figcaption>
+    </figure>
+    <p>Price: ₹180 / kg</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="data:image/jpeg;base64,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"
+             alt="Tomatoes" width="100" height="50">
+        <figcaption>Organic Tomatoes</figcaption>
+    </figure>
+    <p>Price: ₹60 / kg</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://t4.ftcdn.net/jpg/01/08/76/99/360_F_108769942_rrv3QfSPmQIKCBVmVB1wUMgF8BRl3C0l.jpg"
+             alt="Spinach" width="100" height="50">
+        <figcaption>Green Spinach</figcaption>
+    </figure>
+    <p>Price: ₹40 / bunch</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSph7KkV8WkmWuc6b4DDO-mVc6-Lx8eN-CTuQ&s"
+             alt="Fresh Milk" width="100" height="50">
+        <figcaption>Fresh Dairy Milk</figcaption>
+    </figure>
+    <p>Price: ₹55 / litre</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://tiimg.tistatic.com/fp/1/008/363/2-5-gram-fat-14-5-protein-blending-processing-whole-wheat-flour-for-making-chapati-213.jpg"
+             alt="Aashirvaad Atta 5kg" width="100" height="50">
+        <figcaption>Aashirvaad Atta 5kg</figcaption>
+    </figure>
+    <p>Price: ₹55 / kg</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://i0.wp.com/sukhindia.com/wp-content/uploads/2021/10/LOIL500gmBaya86xx04122020_5_B.jpg?fit=695%2C695&ssl=1
+             alt="Freedom Refined Sunflower Oil " width="100" height="50">
+        <figcaption> 5 Litre Bottle</figcaption>
+    </figure>
+    <p>Price: ₹900/ litre</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/WQ/FT/ID/3642811/1kg-tata-salt-packet-500x500.jpg"
+             alt="salt" width="100" height="50">
+        <figcaption> Salt</figcaption>
+    </figure>
+    <p>Price: ₹10 / packet</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQszVwve90Q-MgnA692Jt0nq-JqPavxbe3kSQ&s"
+             alt="rice bag " width="100" height="50">
+        <figcaption> Salt</figcaption>
+    </figure>
+    <p>Price: ₹2000/ packet</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_5VLit3QhkYbI-vXxUnjX8MImNZ-vTED3Tw&s"
+             alt="sugar packet" width="100" height="50">
+        <figcaption> sugar</figcaption>
+    </figure>
+    <p>Price: ₹70/ packet</p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtmNO3YYiPKKfU2i_Z4sF2KYpGRSJkiz2V6g&s"
+             alt="pineapple" width="100" height="50">
+        <figcaption> pineapple</figcaption>
+    </figure>
+    <p>Price: ₹90/ kg </p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://www.shutterstock.com/image-photo/poznan-poland-oct-28-2021-260nw-2071581119.jpg"
+             alt="softdrinks" width="100" height="50">
+        <figcaption> softdrinks</figcaption>
+    </figure>
+    <p>Price: ₹90/ 1 liter </p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaFcW3RVmI_gEqPcoNLV1Duopn2QQfveegUz-L4O_NEkjGEnToGXgIGT3y4GCk3vQAMt0iFVZG3uFHZ_5y57XsP7A2brDkxg4GU-4eE6uBZ0i7ZGnvw3nPxTY"
+             alt="Parle G " width="100" height="50">
+        <figcaption> Parle G </figcaption>
+    </figure>
+    <p>Price: ₹10/ 1 packet </p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-20PpsHgy4xv9sCXYc-1O7iTTPcx7slSxjA&s"
+             alt="chocolate  " width="100" height="50">
+        <figcaption> chocolate  </figcaption>
+    </figure>
+    <p>Price: ₹10/ 1 packet </p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-tea6OFM6KiTDwMe0ENPjf4cqmITvakWuxw&s"
+             alt="curd " width="100" height="50">
+        <figcaption> curd </figcaption>
+    </figure>
+    <p>Price: ₹30/ 50grms packet  </p>
+    <button>Add to Cart</button>
+</article>
+
+<article>
+    <figure>
+        <img src="https://nutribinge.in/cdn/shop/articles/seeds_dry_fruits_nuts.webp?v=1713264895"
+             alt="seeds and dry fruits " width="100" height="50">
+        <figcaption> seeds and dry fruits </figcaption>
+    </figure>
+    <p>Price: ₹250/ 50grms packet  </p>
+    <button>Add to Cart</button>
+</article> 
+</section>
+
+<footer>
+    <p> Products Page</p>
+</footer>
+
+</body>
+</html>
