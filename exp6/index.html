@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>User Registration Form</h2>
+
+    <form id="userForm">
+        <input type="text" id="name" placeholder="Enter Your Name" required>
+
+        <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+
+        <input type="email" id="email" placeholder="Enter Your Email" required>
+
+        <input type="text" id="skills" placeholder="Enter Your Skills" required>
+
+        <input type="text" id="hobbies" placeholder="Enter Your Hobbies" required>
+
+        <textarea id="message" placeholder="Enter Your Message" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display Box -->
+    <div id="outputBox" class="hidden">
+        <h3>Submitted Data</h3>
+        <div id="outputContent"></div>
+        <button type="button" onclick="copyData()">Copy Data</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
