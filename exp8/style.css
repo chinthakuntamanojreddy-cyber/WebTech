@@ -1,0 +1,117 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(120deg, #9f5ad4, #323576); /* fixed space issue */
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(120deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #222;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #8f94fb;
+    text-decoration: underline;
+}
+
+/* Section (main content box) */
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: linear-gradient(120deg, #a562bc, #7577a1); /* fixed */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h2 {
+    color: #8d1c3e;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #222;
+}
+
+/* Paragraph */
+p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* List */
+ul {
+    margin: 10px 0 20px 20px;
+}
+
+/* Form styling */
+form {
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #4e54c8;
+}
+
+/* Button */
+button {
+    background: #4e54c8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8f94fb;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+}
