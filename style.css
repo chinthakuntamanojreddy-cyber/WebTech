@@ -72,3 +72,30 @@ nav {
     transform: scale(1.1);
     opacity: 0.8;
 }
+
+.box:nth-child(8) {
+    background-color: #cc0b24;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.box:nth-child(9) {
+    background-color: #070e2d;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.box:nth-child(10) {
+    background-color: #131212;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
