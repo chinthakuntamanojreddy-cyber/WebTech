@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Entry Form</title>
+  <style>
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('BG5.jpg');
+      backdrop-filter: blur(5px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .main-container h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 10px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Sub-container flex */
+    .sub-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Individual input containers */
+    .container {
+      flex: 1;
+      padding: 20px;
+      background: #333;
+      border-radius: 8px;
+      box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .container:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+      background-color: #444;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Label and Input Styling */
+    label {
+      font-size: 18px;
+      color: #ddd;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style for all input fields */
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #555;
+      border-radius: 12px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+      color: #fff;
+      background: linear-gradient(145deg, #333, #555);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    }
+
+    input[type="text"]:hover,
+    input[type="date"]:hover {
+      background: linear-gradient(145deg, #444, #666);
+      border-color: #007bff;
+    }
+
+    /* Style for select dropdown */
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #555;
+      border-radius: 12px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border 0.3s ease, box-shadow 0.3s ease;
+      color: black; /* Text color for the dropdown */
+      background: linear-gradient(145deg, #333, #555);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    select:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+    }
+
+    select:hover {
+      background: linear-gradient(145deg, #444, #666);
+      border-color: #007bff;
+    }
+
+    /* Submit Button Styling (your animated one) */
+    .submit-button {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      margin-top: 20px;
+      letter-spacing: 3px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+      border-radius: 10px;
+      background: rgba(0, 0, 0, .9);
+    }
+
+    .submit-button:hover {
+      background: #fff;
+      color: #272727;
+      border-radius: 5px;
+    }
+
+    .submit-button span {
+      position: absolute;
+      display: block;
+    }
+
+    .submit-button span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #fff);
+      animation: btn-anim1 1.5s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+      0% { left: -100%; }
+      50%, 100% { left: 100%; }
+    }
+
+    .submit-button span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #fff);
+      animation: btn-anim2 1.5s linear infinite;
+      animation-delay: .375s;
+    }
+
+    @keyframes btn-anim2 {
+      0% { top: -100%; }
+      50%, 100% { top: 100%; }
+    }
+
+    .submit-button span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #fff);
+      animation: btn-anim3 1.5s linear infinite;
+      animation-delay: .75s;
+    }
+
+    @keyframes btn-anim3 {
+      0% { right: -100%; }
+      50%, 100% { right: 100%; }
+    }
+
+    .submit-button span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #fff);
+      animation: btn-anim4 1.5s linear infinite;
+      animation-delay: 1.125s;
+    }
+
+    @keyframes btn-anim4 {
+      0% { bottom: -100%; }
+      50%, 100% { bottom: 100%; }
+    }
+
+    /* Center Submit Button */
+    .submit-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-container">
+  <h1>Bus Entry Form</h1>
+  
+  <form action="#" method="post">
+    
+    <div class="sub-container">
+      <div class="container">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+      </div>
+
+      <div class="container">
+        <label for="vehicleNumber">Vehicle Number:</label>
+        <select id="vehicleNumber" name="vehicleNumber" required>
+          <option value="">-- Select Vehicle Number --</option>
+          <option value="AP39VW5934">AP39VW5934</option>
+          <option value="AP39VF1043">AP39VF1043</option>
+          <option value="AP39VZ3415">AP39VZ3415</option>
+          <option value="AP39UM1623">AP39UM1623</option>
+          <option value="AP39VZ2778">AP39VZ2778</option>
+        </select>
+      </div>
+
+      <div class="container">
+        <label for="busStartTime">Start Time:</label>
+        <input type="text" id="busStartTime" name="busStartTime" placeholder="Enter Start Time" required>
+      </div>
+
+      <div class="container">
+        <label for="busEndTime">End Time:</label>
+        <input type="text" id="busEndTime" name="busEndTime" placeholder="Enter End Time" required>
+      </div>
+    </div>
+
+    <div class="submit-container">
+      <button type="submit" class="submit-button">
+        <span></span><span></span><span></span><span></span> Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

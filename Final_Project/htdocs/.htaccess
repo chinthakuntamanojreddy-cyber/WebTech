@@ -1,0 +1,27 @@
+Options +FollowSymLinks
+AllowOverride All
+
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+
+DirectoryIndex Login.php index.php index.html
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+home/[^/]+/[^/]+/[^/]+/htdocs/(.+)\sHTTP [NC]
+  RewriteRule ^ /%1 [R=301,L]
+
+  RewriteRule ^$ Login.php [L,R=302]
+</IfModule>
+
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
+
+<Files ".htaccess">
+  Order Allow,Deny
+  Deny from all
+</Files>

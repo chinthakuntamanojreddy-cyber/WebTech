@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Dropdown Options</title>
+  <!-- Bootstrap CSS -->
+<!-- Bootstrap 5.3.0 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<!-- Google Font: Cinzel -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+ <style>
+ body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('BG5.jpg');
+  backdrop-filter: blur(5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Headings only */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #2f3e46;
+}
+
+/* h4 specific styling */
+h4 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ced4da;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+/* Sections and cards */
+.section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* List items */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.list-item:hover {
+  background-color: #e0f2f1;
+  transform: scale(1.02);
+}
+
+.list-item span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.btn {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.btn-info {
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  color: #0c5460;
+}
+
+.btn-info:hover {
+  background-color: #b3daff;
+  color: #083744;
+}
+
+.btn-light-green {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.btn-light-green:hover {
+  background-color: #c0e6d1;
+  color: #0c3f2f;
+}
+
+.btn-light-red {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.btn-light-red:hover {
+  background-color: #f1b0b7;
+  color: #491217;
+  border-color: #f1b0b7;
+}
+
+/* Input group */
+.input-group input {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* Modal styles */
+.input-group .btn-success,
+.navbar,
+.modal-title,
+.modal-footer .btn-primary {
+  font-family: 'Cinzel', serif;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+}
+
+.modal-footer .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+</style>
+
+</head>
+<body>
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+ 
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+              
+
+  <!-- Your Custom Top Bar -->
+  <div class="top-bar d-flex justify-content-between align-items-center p-3 border-bottom"
+       style="background: transparent; font-family: 'Cinzel', serif;">
+    <h1 class="h2 m-0 text-white-50">Vehicle Management</h1>
+    <div class="button-group">
+      <a href="/Vechiles/Auto.php" class="btn btn-info btn-md shadow px-4 py-2">
+        <i class="fas fa-car fa-sm text-white-50"></i> Auto Details
+      </a>
+      <a href="/edit_dropdowns.html" class="btn btn-success btn-md shadow px-4 py-2">
+        <i class="fas fa-edit fa-sm text-white-50"></i>Bus Edit
+      </a>
+      <a href="/Admin/Dashboard.php" class="btn btn-primary btn-md shadow px-4 py-2">
+        <i class="fas fa-user-shield fa-sm text-white-50"></i> Admin
+      </a>
+    </div>
+  </div>
+  <br><br>
+<div class="container">
+  <div class="container">
+  <div class="row">
+    <!-- Vehicle Numbers Section -->
+    <div class="col-md-6">
+      <div class="section">
+        <h4>Vehicle Numbers</h4>
+        <ul id="vehicleList" class="list-group mb-3"></ul>
+        <div class="input-group">
+          <input type="text" id="newVehicle" class="form-control" placeholder="Enter New Vehicle Number">
+          <button class="btn btn-success" onclick="addOption('vehicle')">Add Vehicle</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bus Routes Section -->
+    <div class="col-md-6">
+      <div class="section">
+        <h4>Auto Routes</h4>
+        <ul id="routeList" class="list-group mb-3"></ul>
+        <div class="input-group">
+          <input type="text" id="newRoute" class="form-control" placeholder="Enter New Bus Route">
+          <button class="btn btn-success" onclick="addOption('route')">Add Route</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Editing -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Option</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="editValue" class="form-control" placeholder="Edit value">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="saveEdit()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let data = {};
+let editingType = '';
+let editingIndex = -1;
+
+function loadOptions() {
+  $.getJSON("options_handler.php", function(res) {
+    data = res;
+    updateUI();
+  });
+}
+
+function updateUI() {
+  $("#vehicleList").empty();
+  data.vehicleNumbers.forEach((val, index) => {
+    $("#vehicleList").append(`
+      <li class="list-item">
+        <span>${val}</span>
+        <div>
+          <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" onclick="prepareEdit('vehicle', ${index})">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+<button class="btn btn-light-red shadow-sm btn-sm px-3" onclick="deleteOption('vehicle', ${index})">
+  <i class="bi bi-trash-fill me-1"></i> Delete
+</button>
+
+        </div>
+      </li>`);
+  });
+
+  $("#routeList").empty();
+  data.busRoutes.forEach((val, index) => {
+    $("#routeList").append(`
+      <li class="list-item">
+        <span>${val}</span>
+        <div>
+          <button class="btn btn-light-green btn-sm" data-bs-toggle="modal" data-bs-target="#editModal" onclick="prepareEdit('route', ${index})">
+            <i class="bi bi-pencil-square"></i> Edit
+          </button>
+          <button class="btn btn-light-red shadow-sm btn-sm px-3m" onclick="deleteOption('route', ${index})">
+            <i class="bi bi-trash-fill me-1"></i> Delete
+          </button>
+        </div>
+      </li>`);
+  });
+}
+
+function addOption(type) {
+  const val = type === 'vehicle' ? $("#newVehicle").val().trim() : $("#newRoute").val().trim();
+  if (!val) return alert("Please enter a value");
+
+  if (type === 'vehicle') data.vehicleNumbers.push(val);
+  else data.busRoutes.push(val);
+
+  saveData();
+}
+
+function editOption(type, index) {
+  const current = type === 'vehicle' ? data.vehicleNumbers[index] : data.busRoutes[index];
+  const newVal = prompt("Enter new value:", current);
+  if (newVal && newVal.trim()) {
+    if (type === 'vehicle') data.vehicleNumbers[index] = newVal.trim();
+    else data.busRoutes[index] = newVal.trim();
+    saveData();
+  }
+}
+
+function deleteOption(type, index) {
+  if (type === 'vehicle') data.vehicleNumbers.splice(index, 1);
+  else data.busRoutes.splice(index, 1);
+  saveData();
+}
+
+function prepareEdit(type, index) {
+  editingType = type;
+  editingIndex = index;
+  const current = type === 'vehicle' ? data.vehicleNumbers[index] : data.busRoutes[index];
+  $("#editValue").val(current);
+}
+
+function saveEdit() {
+  const newValue = $("#editValue").val().trim();
+  if (newValue) {
+    if (editingType === 'vehicle') data.vehicleNumbers[editingIndex] = newValue;
+    else data.busRoutes[editingIndex] = newValue;
+    saveData();
+    $('#editModal').modal('hide');
+  }
+}
+
+function saveData() {
+  $.ajax({
+    url: "options_handler.php",
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(data),
+    success: loadOptions
+  });
+}
+
+$(document).ready(loadOptions);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

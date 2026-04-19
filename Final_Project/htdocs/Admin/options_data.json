@@ -1,0 +1,34 @@
+{
+    "vehicleNumbers": [
+        "AP39VW5934",
+        "AP39VF1043",
+        "AP39VZ3415",
+        "AP39UM1623",
+        "AP39UZ3831",
+        "AP39VW0248",
+        "AP39UF9925",
+        "AP39VW0284",
+        "AP39UY7255",
+        "AP39VW2230",
+        "AP39UD5951",
+        "AP39UY2675",
+        "AP39UY7254",
+        "AP39WB8591"
+    ],
+    "busRoutes": [
+        "CHILAMAKURU",
+        "MUDIGUBHA",
+        "KONDAPURAM",
+        "YARRAGUNTLA-I",
+        "YARRAGUNTLA-II",
+        "MUDDANURU",
+        "PARMAPALLI",
+        "YELLANURU",
+        "VEMPALLI",
+        "SIMHADRIPURAM",
+        "MALAKAVEMULA",
+        "TALAPULA",
+        "KADIRI",
+        "CHAKRAYAPET"
+    ]
+}

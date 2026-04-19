@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📋 Material Entry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Existing CSS remains the same */
+    :root {
+      --primary-color: #4A90E2;
+      --accent-color: #ffffffcc;
+      --glass-bg: rgba(255, 255, 255, 0.15);
+      --border-radius: 20px;
+      --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url('fabric.jpg') center/cover no-repeat fixed;
+      blur:50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      backdrop-filter: blur(25px);
+      background: var(--glass-bg);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--border-radius);
+      padding: 35px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: var(--box-shadow);
+      animation: fadeSlide 0.6s ease;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+      font-size: 28px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    label {
+      color: #fff;
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+  input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  background: var(--accent-color);
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      font-size: 17px;
+      font-weight: bold;
+      border: none;
+      border-radius: var(--border-radius);
+      background: linear-gradient(135deg, var(--primary-color), #2c67f2);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #3b78d4, #174fbd);
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    @media (max-width: 540px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      input[type="text"] {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>📋 Material Entry Form</h2>
+  <form id="form" action="upload.php" method="post">
+    
+    <label for="supplier">Supplier:</label>
+    <input type="text" id="supplier" name="supplier" placeholder="Enter supplier..." required>
+
+    <label for="material_code">Material Code:</label>
+    <input type="text" id="material_code" name="material_code" placeholder="Enter material code..." required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" placeholder="Enter location..." required>
+
+    <!-- ✅ New Bails Field -->
+    <label for="bails">Bails:</label>
+    <input type="number" id="bails" name="bails" placeholder="Enter number of bails..." min="0">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
